@@ -1,3 +1,4 @@
+
 1. Write a callback function that doubles each number in an array.
 2. Write a callback function that filters out even numbers from an array.
 3. Write a callback function that finds the sum of all numbers in an array.
@@ -8,3 +9,14 @@
 8. Write a callback function that counts the number of even numbers in an array.
 9. Write a callback function that reverses the numbers in an array.
 10. Write a callback function that multiplies each number in an array by a given factor.
+
+11. Write a callback function that removes all the duplicate numbers from an array.
+12. Write a callback function that removes all the odd numbers from an array.
+13. Write a callback function that finds the average of all numbers in an array.
+14. Write a callback function that finds the middle number of an array.
+15. Write a callback function that returns an array of numbers with the first and last element of the array swapped.
+16. Write a callback function that checks if all numbers in an array are negative.
+17. Write a callback function that counts the number of odd numbers in an array.
+18. Write a callback function that removes all the negative numbers from an array.
+19. Write a callback function that multiplies each number in an array by the number of times it appears in the array.
+

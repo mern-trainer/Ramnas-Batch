@@ -17,7 +17,7 @@
 
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-const res = array.filter(function (value) {
+const res = array.filter((value) => {
     return value % 2 == 0
 }) // 0 - array.length
 
@@ -43,7 +43,7 @@ const res = array.filter(function (value) {
 
 const arr = [1, 2, 3, 4, 5, 6];
 
-const response = arr.reduce(function (prevTotal, value) {
+const response = arr.reduce((prevTotal, value) => {
     if (value % 2 == 0) {
         return prevTotal + value
     }
@@ -52,4 +52,15 @@ const response = arr.reduce(function (prevTotal, value) {
 
 console.log(response);
 
+const fruits = ['apple', 'banana', 'orange', 'mango', 'grapes', 'pineapple'];
+
+const res1 = fruits.map((fruit) => {
+    return fruit.replace(fruit[0], fruit[0].toUpperCase())
+})
+
+console.log(res1);
+
+const string = fruits.reduce((prev, value) => prev + value, "");
+
+console.log(string);
 

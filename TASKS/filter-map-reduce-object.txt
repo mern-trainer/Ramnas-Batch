@@ -1,0 +1,39 @@
+const employees = [
+    { name: "Alice Chen", age: 30, salary: 70000, department: "Engineering" },
+    { name: "Robert Smith", age: 45, salary: 80000, department: "Marketing" },
+    { name: "Charles Lee", age: 35, salary: 65000, department: "Engineering" },
+    { name: "David Kim", age: 50, salary: 90000, department: "Management" },
+    { name: "Evelyn Brown", age: 28, salary: 50000, department: "Marketing" },
+    { name: "Franklin White", age: 40, salary: 75000, department: "Finance" },
+    { name: "Gabriella Davis", age: 32, salary: 62000, department: "Engineering" },
+    { name: "Hannah Martin", age: 27, salary: 55000, department: "Marketing" },
+    { name: "Isaac Taylor", age: 38, salary: 68000, department: "HR" },
+    { name: "Jackson Jackson", age: 42, salary: 72000, department: "Finance" },
+    { name: "Katherine Brooks", age: 29, salary: 54000, department: "Engineering" },
+    { name: "Leonard Jenkins", age: 33, salary: 58000, department: "HR" },
+    { name: "Molly Rodriguez", age: 47, salary: 82000, department: "Marketing" },
+    { name: "Nicole Lewis", age: 31, salary: 69000, department: "Finance" },
+    { name: "Oliver Hall", age: 36, salary: 73000, department: "Management" }
+];
+
+
+1. Create a new list that contains the names of all employees in uppercase.
+2. Generate a list of employees who earn more than $60,000.
+3. Calculate the total salary of all employees.
+4. Find the average salary of employees in the "Marketing" department.
+5. Extract a list of all employee names.
+6. Create a new array with the ages of all employees increased by 5 years.
+7. Generate an array with each employee's department and salary.
+8. Find all employees who are older than 35 years.
+9. List all employees who work in the "Engineering" department.
+10. Find the highest salary among all employees.
+11. Compute the total number of employees. (without using length property)
+12. Create a list of names of employees who earn more than $70,000
+13. List of formatted strings (name and department) for employees younger than 30.
+14. Compute the total salary of employees in the "Finance" department.
+15. Find the average age of employees in the "Engineering" department.
+16. Create a list of names of employees who are in the "Marketing" or "HR" departments.
+17. Get a list of salaries of employees who are not in "Management".
+18. Find the total combined age of all employees in the dataset.
+19. List the names of employees who have a salary between $60,000 and $80,000.
+20. Determine the number of employees who earn more than the average salary.

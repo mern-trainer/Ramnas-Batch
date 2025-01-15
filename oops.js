@@ -40,7 +40,7 @@ class College{
         this.#collegeName = collegeName
     }
 
-    displayCollege(a) {
+    displayCollege() {
         console.log(this.#collegeName);
     }
 
@@ -62,7 +62,7 @@ class Student extends College{
     }
 
     // @overriding
-    displayCollege(a) {
+    displayCollege() {
         super.displayCollege()
         console.log("This is a child class");
     }

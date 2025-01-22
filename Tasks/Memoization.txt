@@ -1,11 +1,11 @@
-1. Write a function that takes an array of numbers and returns the maximum sum of any subset of the array using memoization.
-2. Write a function that takes a string and returns the longest palindromic substring using memoization.
-3. Write a function that takes an array of strings and returns the longest common substring using memoization.
-4. Write a function that takes an array of numbers and returns the product of the largest three numbers using memoization.
-5. Write a function that takes a string and returns the number of times each character appears in the string using memoization.
-6. Write a function that takes an array of objects and returns the object with the highest average value of a given property using memoization.
-7. Write a function that takes an array of numbers and returns the sum of all the numbers that are divisible by 3 or 5 using memoization.
-8. Write a function that takes an array of strings and returns the number of strings that contain the letter "a" using memoization.
-9. Write a function that takes a string and returns the number of times each letter appears in the string using memoization.
-10. Write a function that takes an array of numbers and returns the number of times each number appears in the array using memoization.
+Memoize the following functions
 
+1. Write a function that takes array of numbers and calculate the sum of all the numbers.
+2. Write a function that takes a number as an argument and returns the factorial of that number.
+3. Write a funciton that takes a number as an argument and returns the number is palindrome or not.
+4. Write a funciton that takes a number as an argument and returns the number is prime or not.
+5. Write a function that takes an id as an argument and returns the name and avatar of the user.
+    Use Api: https://api.escuelajs.co/api/v1/users/<replace_with_id>
+6. Write a function that takes a limit as an argument and returns the first n users info.
+    Use Api: https://www.freetestapi.com/api/v1/users?limit=<replace_with_limit>
+7. Write a function that takes a string as an argument and returns the reverse of the string.

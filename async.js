@@ -300,3 +300,22 @@ const handleTodo = async () => {
 }
 
 handleTodo()
+
+// Hoisting => used to move declarations to the top of the scope
+// Not Defined and Undefined
+
+console.log(a)
+
+var a;
+
+// let, const => there is no hoisting
+
+// Javascript => 2 phases
+// 1. Memory Creation Phase
+// 2. Execution Phase
+
+sample()
+
+function sample() {
+    console.log("Hi");
+}

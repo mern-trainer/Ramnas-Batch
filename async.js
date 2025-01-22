@@ -236,17 +236,17 @@ const handlePromise = async () => {
 
 // Memoization => used to cache the result of a function, so that it can be used later without executing the function again
 
-const store = {}
+const store = new Map()
 
 // {"10,20": 30, "10,30": 40}
 const sum = (a, b) => {
     const key = `${a},${b}`
-    if (store[key]) {
-        return store[key]
+    if (store.has(key)) {
+        return store.get(key)
     }
     console.log("Calculating sum...");
     const s = a + b
-    store[key] = s // store.name
+    store.set(key, s)
     return s
 }
 
@@ -255,3 +255,48 @@ console.log(sum(1,2));
 console.log(sum(1,2));
 
 // Map => used to store key-value pairs
+// MapConstructor => new Map()
+
+// const map = new Map()
+
+// map.set("name", "John")
+
+// // map.delete("name")
+
+// console.log(map.has("name"));
+// map.clear()
+// console.log(map);
+// console.log(map.get("name"));
+
+
+// API Calling
+// Memoization => used to cache the result of a function, so that it can be used later without executing the function again
+// Optimization technique
+                
+const cache = new Map()
+
+const getTodo = async (id) => {
+    try {
+        if (cache.has(id)) {
+            return cache.get(id)
+        }
+        console.log("Fetching data...");
+        const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        const result = await response.json()
+        cache.set(id, result)
+        return result
+    } catch (error) {
+        return null 
+    }
+}
+
+const handleTodo = async () => {
+    let todo = await getTodo(1)
+    console.log(todo);
+    todo = await getTodo(2)
+    console.log(todo);
+    todo = await getTodo(1)
+    console.log(todo);
+}
+
+handleTodo()

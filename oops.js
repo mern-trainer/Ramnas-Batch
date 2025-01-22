@@ -77,3 +77,38 @@ obj.displayStudent()
 
 // new => Memory allocation
 // this => reference to the current object => Global object
+
+// Inheritance => A class can inherit properties and methods from another class.
+
+// single inheritance => a class can inherit properties and methods from a single parent class.
+// multiple inheritance => a class can inherit properties and methods from multiple parent classes.
+// hybrid inheritance => a class can inherit properties and methods from both single and multiple parent classes.
+// multilevel inheritance => a class can inherit properties and methods from a parent class and the parent class can inherit properties and methods from another parent class.
+// hierarchical inheritance => a class can inherit properties and methods from multiple parent classes.
+
+const arr = [8,9]
+
+var plusOne = function(digits) {
+    for (let i = digits.length - 1; i >= 0; i--) {
+        const number = digits[i] + 1
+        if (number < 10) {
+            digits[i] = number
+            return digits
+        }
+        digits[i] = 0
+    }
+    digits.unshift(1)
+    return digits
+};
+
+console.log(plusOne(arr));
+
+import weather from "weather-js"
+
+weather.find({ search: "Kozhikode", degreeType: "C" }, function (error, result) {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log(result);
+    }
+});

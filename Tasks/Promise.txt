@@ -1,0 +1,9 @@
+1. Create a promise that resolves an object with the properties "name", "age", and "city".
+2. Create a promise that rejects with an error message.
+3. Create a promise that handle users marks and calculate the average marks.
+
+ -> Web using HTML, CSS and JS
+
+4. Generate a random joke generate application using API: https://v2.jokeapi.dev/joke/Any
+5. Generate a random user image using API: https://randomuser.me/api
+6. generate a news application using API: https://ok.surf/api/v1/cors/news-feed

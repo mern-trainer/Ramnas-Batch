@@ -1,0 +1,6 @@
+1. Remove duplicate numbers from an array
+2. Create a set from an array of numbers
+3. Create a set from an array of strings
+4. Check if a set contains a specific element
+5. Create a set from an array of objects
+

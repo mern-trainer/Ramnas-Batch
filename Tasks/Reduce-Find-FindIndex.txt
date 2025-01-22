@@ -1,0 +1,20 @@
+1. Find the first element in the array [1, 2, 3, 4, 5] that is greater than 3 using the find method.
+2. Find the index of the first element in the array [1, 2, 3, 4, 5] that is greater than 3 using the findIndex method.
+3. Reduce the array [1, 2, 3, 4, 5] to a single value by multiplying all elements together using the reduce method.
+4. Find the first element in the array ["apple", "banana", "cherry"] that contains the letter "a" using the find method.
+5. Find the index of the first element in the array ["apple", "banana", "cherry"] that contains the letter "a" using the findIndex method.
+6. Reduce the array ["apple", "banana", "cherry"] to a single value by concatenating all strings together using the reduce method.
+7. Find the first element in the array [1, 2, 3, 4, 5] that is an even number using the find method.
+8. Find the index of the first element in the array [1, 2, 3, 4, 5] that is an even number using the findIndex method.
+9. Reduce the array [1, 2, 3, 4, 5] to a single value by summing all elements together using the reduce method.
+10. Find the first element in the array ["apple", "banana", "cherry"] that contains the letter "e" using the find method.
+11. Find the index of the first element in the array ["apple", "banana", "cherry"] that contains the letter "e" using the findIndex method.
+12. Reduce the array ["apple", "banana", "cherry"] to a single value by concatenating all strings together in reverse order using the reduce method.
+13. Find the first element in the array [1, 2, 3, 4, 5] that is greater than 4 using the find method.
+14. Find the index of the first element in the array [1, 2, 3, 4, 5] that is greater than 4 using the findIndex method.
+15. Reduce the array [1, 2, 3, 4, 5] to a single value by multiplying all elements together in reverse order using the reduce method.
+16. Find the first element in the array ["apple", "banana", "cherry"] that contains the letter "o" using the find method.
+17. Find the index of the first element in the array ["apple", "banana", "cherry"] that contains the letter "o" using the findIndex method.
+18. Reduce the array ["apple", "banana", "cherry"] to a single value by concatenating all strings together in reverse order and then reversing the result using the reduce method.
+19. Find the first element in the array [1, 2, 3, 4, 5] that is an odd number using the find method.
+20. Find the index of the first element in the array [1, 2, 3, 4, 5] that is an odd number using the findIndex method.

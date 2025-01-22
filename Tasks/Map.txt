@@ -1,0 +1,6 @@
+1. Create a function that takes a string and returns its length. Save the length to a Map().
+2. Create a function that takes a number and returns its square. Save the square to a Map().
+3. Create a function that takes a string and returns its reverse. Save the reverse string to a Map().
+4. Create a function that takes 2 numbers and returns their sum. Save sum to a Map().
+5. Create a function that takes a string and returns the count of each character in the string. Save the count to a Map().
+

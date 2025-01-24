@@ -9,3 +9,4 @@ Memoize the following functions
 6. Write a function that takes a limit as an argument and returns the first n users info.
     Use Api: https://www.freetestapi.com/api/v1/users?limit=<replace_with_limit>
 7. Write a function that takes a string as an argument and returns the reverse of the string.
+

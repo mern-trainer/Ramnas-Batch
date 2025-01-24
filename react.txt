@@ -1,0 +1,63 @@
+-> What is js => JavaScript is a programming language used to create interactive and dynamic web pages.
+-> Variables => Container to store data values.
+-> Identifiers => User defined names => variable names, function names.
+-> Keywords => Reserved words that cannot be used as identifiers.
+-> Data types => Type of data that can be stored in a variable.
+-> Promise => Represents the eventual completion (or failure) of an asynchronous operation.
+-> asynchronous => Execution of code in parallel.
+-> synchronous => Line by line execution.
+-> callback function => Function that is passed as an argument to another function.
+-> HOF => Higher order function => Function that takes a function as an argument or returns a function as a return value.
+-> Closure => The combination of a function bundled together with references to its surrounding state.
+-> Arrow function => Shorthand for writing a function.
+-> Destructuring => Extracting data from an object or array.
+-> Rest Operator => ... => Extracting remaining data from an object or array.
+-> Spread Operator => ... => Copying data from an object or array.
+-> Pass by reference => Pass value with reference
+-> Pass by value => pass value with copy
+-> Memoization => Caching the result of a function so that it doesn't need to be computed again.
+-> Recursion => Calling a function within itself.
+-> Array -> Collection of elements
+-> Object -> Collection of key-value pairs
+-> Class => Template for creating objects.
+-> Methods => Functions that belong to a class.
+-> 4 pillers of oops => Abstraction, Encapsulation, Inheritance, Polymorphism
+-> string => Collection of characters
+-> map => array manipulation
+-> filter => filter elements from an array based on a condition
+-> reduce => returns a single value by iteratively applying a function to each element of the array
+-> MapConstructor => Constructor for Map object
+-> SetConstructor => Constructor for Set object
+-> Function => A function is a block of code that performs a specific task.
+-> DOM => Document Object Model => Tree structure => Manipulate html elements, styles, handle events using js
+-> DOM is a programming interface for web documents
+
+=> ReactJS
+
+-> What is reactJS => 
+    1. React is a JavaScript library for building user interfaces.
+    2. interactive and dynamic web pages.
+    
+-> Features of ReactJS =>
+    1. Component based architecture.
+    2. JSX (JavaScript XML). -> HTML like syntax for writing JSX.
+    3. Maintainable and reusable code.
+    4. Unidirectional data flow.
+    5. Virtual DOM. => Virtual DOM is a copy of the real DOM.
+    6. Single Page Application.
+    7. Performance optimization.
+
+-> Virtual DOM => Virtual DOM is a copy of the real DOM.
+    -> Prev VDOM, Updated VDOM
+-> JSX => JavaScript XML. => HTML like syntax for writing JSX.
+
+-> NodeJS => 
+    1. NodeJS is a runtime environment for executing JavaScript code outside the browser.
+    2. NodeJS allows you to run JavaScript code on the server-side.
+    
+-> npm => Node Package Manager
+
+
+-> Camel case => firstName
+-> Pascal case => FirstName
+-> Snake Case => first_name

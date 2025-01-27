@@ -1,0 +1,6 @@
+-> What is React?
+-> Features:
+    -> Components:
+    -> JSX:
+    -> Virtual DOM:
+    -> One-Way Binding:

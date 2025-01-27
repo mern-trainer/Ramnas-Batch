@@ -1,7 +1,12 @@
-const App = () => {
-   return "Hello World"
-}
+import { Fragment } from "react"
+import LandingPage from "./Pages/LandingPage"
+import Header from "./Components/Header"
 
-export default App
+export const App = () => {
+   return <Fragment>
+      <Header />
+      <LandingPage />
+   </Fragment> 
+}
 
 

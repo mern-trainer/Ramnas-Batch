@@ -2,8 +2,24 @@
     display: flex;
     justify-content: space-between;
     padding-inline: 20px;
-    background-color: #2b2b2b;
     height: 60px;
     align-items: center;
-    color: white;
 }
+
+.header-container img{
+    width: 120px;
+}
+
+.header-container .nav{
+    display: flex;
+    font-weight: 500;
+    gap: 20px;
+    list-style: none;
+}
+
+/* combination selector */
+.header-container .right-section{ 
+    display: flex;
+    gap: 25px;
+}
+

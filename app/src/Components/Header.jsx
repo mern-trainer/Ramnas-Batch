@@ -1,21 +1,14 @@
-const style = {
-    height: "60px",
-    color: "white",
-    backgroundColor: "#222222",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center"
-}
+import "./Header.css"
 
 const Header = () => {
-    return <div style={{style}}>
-        <div>
+    return <div className="header-container">
+        <div className="logo">
             Logo
         </div>
-        <div>
+        <div className="nav">
             Links
         </div>
-        <div>
+        <div className="right-section">
             Button
         </div>
     </div>

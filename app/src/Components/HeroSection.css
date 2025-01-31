@@ -1,0 +1,43 @@
+.learn-more{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background: #000;
+    color: white;
+    gap: 10px;
+    align-items: center;
+}
+
+.hero-container{
+    position: relative;
+}
+
+.hero-container video{
+    width: 100%;
+}
+
+.hero-container .content{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-align: center;
+    color: white;
+    line-height: 2;
+}
+.hero-container .content .one{
+    font-weight: 600;
+}
+.hero-container .content .two{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.hero-container .content button{
+    padding: 10px 25px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+}

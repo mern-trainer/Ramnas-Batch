@@ -1,11 +1,13 @@
 import { Fragment } from "react"
 import Header from "./Components/Header"
-import CarList from "./Components/CarList"
+import HeroSection from "./Components/HeroSection"
+import Explore from "./Components/Explore"
 
 const App = () => {
    return <Fragment>
       <Header />
-      <CarList />
+      <HeroSection />
+      <Explore />
    </Fragment> 
 }
 

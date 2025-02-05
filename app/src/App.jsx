@@ -9,11 +9,13 @@ import Explore from "./Components/Explore"
 import { Button, Image, Navbar, Nav, NavDropdown, Container, Carousel, Card, Form } from "react-bootstrap" // named import
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft, FaEnvelope } from "react-icons/fa";
 import { FaLocationDot, FaPhone } from "react-icons/fa6"
+import Responsive from "./Pages/Responsive"
 
 const App = () => {
 
    return <Fragment>
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Responsive />
+      {/* <Navbar expand="lg" className="bg-body-tertiary">
          <Container fluid>
             <Navbar.Brand href="/">
                <Image src="./logo.png" width={150}/>
@@ -157,7 +159,7 @@ const App = () => {
             </Form.Group>
             <Button className="mt-2 w-100" variant="success" size="sm">Send Message</Button>
          </Form>
-      </div>
+      </div> */}
    </Fragment> 
 
 }

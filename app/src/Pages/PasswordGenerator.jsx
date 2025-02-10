@@ -1,23 +1,28 @@
+import { useState } from "react"
+
 const PasswordGenerator = () => {
+
+    const [password, setPassword] = useState("")
+    const [passwordHistory, setPasswordHistory] = useState([])
 
     const handlePasswordGenerator = () => {
         const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?"
         let i = 0
-        let password = ""
+        let pass = ""
         while (i < 16) {
             const randomIndex = Math.floor(Math.random() * characters.length)
-            const randomCharacter = characters[randomIndex]
-            password += randomCharacter
+            pass += characters[randomIndex]
             i++
         }
-        const pass = document.getElementById("password")
-        pass.innerHTML = password
+        setPassword(pass)
+        setPasswordHistory((passwordHistory) => ([pass, ...passwordHistory]))
     }
 
-    return <div>
+    return <div className="d-flex flex-column align-items-center gap-3 mt-4">
         <h1>Password Generator</h1>
-        <div id="password">...</div>
+        <div>{password}</div>
         <button onClick={handlePasswordGenerator}>Generate Password</button>
+        {passwordHistory.join(" , ")}
     </div>
 }
 

@@ -11,11 +11,13 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft, FaEnvelope } from "react-i
 import { FaLocationDot, FaPhone } from "react-icons/fa6"
 import Responsive from "./Pages/Responsive"
 import States from "./Pages/states"
+import PasswordGenerator from "./Pages/PasswordGenerator"
 
 const App = () => {
 
    return <Fragment>
-      <States />
+      {/* <States /> */}
+      <PasswordGenerator />
       {/* <Responsive /> */}
       {/* <Navbar expand="lg" className="bg-body-tertiary">
          <Container fluid>

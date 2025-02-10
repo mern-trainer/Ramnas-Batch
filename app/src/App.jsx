@@ -16,8 +16,8 @@ import PasswordGenerator from "./Pages/PasswordGenerator"
 const App = () => {
 
    return <Fragment>
-      {/* <States /> */}
-      <PasswordGenerator />
+      <States />
+      {/* <PasswordGenerator /> */}
       {/* <Responsive /> */}
       {/* <Navbar expand="lg" className="bg-body-tertiary">
          <Container fluid>

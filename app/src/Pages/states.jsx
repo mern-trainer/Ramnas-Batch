@@ -6,19 +6,31 @@ import { useState } from "react";
 const States = () => {
 
     // let counter = 0
-    const [counter, setCounter] = useState(10) // [Number, Function]
+    const [counters, setCounters] = useState({one: 10, two: 20}) // [Number, Function]
 
-    const handleClick = () => {
-       setCounter((counter) => counter + 1)
-       setCounter((counter) => counter + 1)
-       setCounter((counter) => counter + 1)
-       setCounter((counter) => counter + 1)
-       setCounter((counter) => counter + 1)
+    // const h = "one"
+    // counters[h]
+    const handleClick = (key, operation) => {
+        // if (operation === "+") {
+        //     setCounters({...counters, [key]: counters[key] + 1})
+        // }
+        // else {
+        //     setCounters({...counters, [key]: counters[key] - 1})
+        // }
+        setCounters({ ...counters, [key]: counters[key] + (operation == "+" ? 1 : -1) })
     }
 
     return <div className="d-flex flex-column align-items-center gap-3 mt-4">
-        <div className="fs-3 fw-bold">{counter}</div>
-        <button onClick={handleClick} className="btn btn-primary w-25">Click</button>
+        <div className="fs-3 fw-bold">{counters.one}</div>
+        <div className="d-flex gap-2">
+            <button onClick={() => handleClick("one", "+")} className="btn btn-success">Increment</button>
+            <button onClick={() => handleClick("one", "-")} className="btn btn-danger">Decrement</button>
+        </div>
+        <div className="fs-3 fw-bold">{counters.two}</div>
+        <div className="d-flex gap-2">
+            <button onClick={() => handleClick("two", "+")} className="btn btn-success">Increment</button>
+            <button onClick={() => handleClick("two", "-")} className="btn btn-danger">Decrement</button>
+        </div>
     </div>
 }
 

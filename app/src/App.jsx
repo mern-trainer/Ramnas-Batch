@@ -10,11 +10,13 @@ import { Button, Image, Navbar, Nav, NavDropdown, Container, Carousel, Card, For
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft, FaEnvelope } from "react-icons/fa";
 import { FaLocationDot, FaPhone } from "react-icons/fa6"
 import Responsive from "./Pages/Responsive"
+import States from "./Pages/states"
 
 const App = () => {
 
    return <Fragment>
-      <Responsive />
+      <States />
+      {/* <Responsive /> */}
       {/* <Navbar expand="lg" className="bg-body-tertiary">
          <Container fluid>
             <Navbar.Brand href="/">

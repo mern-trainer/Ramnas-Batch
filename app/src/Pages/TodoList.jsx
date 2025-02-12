@@ -1,5 +1,7 @@
 import { useState } from "react"
-import { FaList } from "react-icons/fa6"
+import { FaList, FaTrash } from "react-icons/fa6"
+import { toast } from "react-toastify"
+import { v4 } from "uuid"
 
 const TodoList = () => {
 
@@ -11,13 +13,29 @@ const TodoList = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (todo == "") {
-            return alert("Please enter a todo")
+            return toast.error("Task is required")
         }
         if (todoList.includes(todo)) {
-            return alert("Todo already exists")
+            return toast.error("Task already exists")
         }
-        setTodoList([todo, ...todoList])
+        const dateTime = new Date().toLocaleString("en-IN").toUpperCase()
+        const taskObj = {
+            id: v4(),
+            title: todo,
+            status: "Pending", // Pending or Completed
+            createdAt: dateTime,
+            updatedAt: dateTime
+        }
+        // console.log(taskObj);
+        setTodoList([taskObj, ...todoList])
         setTodo("")
+        return toast.success("Task added successfully")
+    }
+
+    const handleDelete = id => {
+        const res = todoList.filter((item) => item.id !== id)
+        setTodoList(res)
+        return toast.success("Task deleted successfully")
     }
 
     return <div className="d-flex justify-content-center pt-4 px-2">
@@ -36,9 +54,15 @@ const TodoList = () => {
             </div>
             <div className="d-flex flex-column gap-2 mt-3">
                 {
-                    todoList.map((data, idx) => {
-                        return <div key={idx} className="d-flex border border-2 border-secondary justify-content-between rounded p-3 text-secondary">
-                            <div>{idx+1}. {data}</div>
+                    todoList.map((data) => {
+                        return <div key={data.id} className="d-flex border border-2 border-secondary justify-content-between rounded p-3 text-secondary">
+                            <div>
+                                <div>{data.title}</div>
+                                <div>{data.status}</div>
+                                <div>{data.createdAt}</div>
+                                <div>{data.updatedAt}</div>
+                            </div>
+                            <div><FaTrash color="red" cursor={"pointer"} onClick={() => handleDelete(data.id)}/></div>
                         </div>
                     })
                 }

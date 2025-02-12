@@ -12,11 +12,13 @@ import { FaLocationDot, FaPhone } from "react-icons/fa6"
 import Responsive from "./Pages/Responsive"
 import States from "./Pages/states"
 import PasswordGenerator from "./Pages/PasswordGenerator"
+import Mapping from "./Pages/Mapping"
 
 const App = () => {
 
    return <Fragment>
-      <States />
+      {/* <States /> */}
+      <Mapping />
       {/* <PasswordGenerator /> */}
       {/* <Responsive /> */}
       {/* <Navbar expand="lg" className="bg-body-tertiary">

@@ -15,10 +15,11 @@ const TodoList = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (todo == "") {
+        if (todo.trim() == "") {
             return toast.error("Task is required")
         }
-        if (todoList.includes(todo)) {
+        const index = todoList.findIndex((item) => item.title.toLowerCase() == todo.toLowerCase())
+        if (index > -1) {
             return toast.error("Task already exists")
         }
         const dateTime = new Date().toLocaleString("en-IN").toUpperCase()
@@ -53,8 +54,12 @@ const TodoList = () => {
     }
 
     const handleTaskUpdate = () => {
-        if(editedTitle == "") {
+        if(editedTitle.trim() == "") {
             return toast.error("Task is required")
+        }
+        const index = todoList.findIndex((item) => item.title.toLowerCase() == editedTitle.toLowerCase() && item.id != editableTask)
+        if (index > -1) {
+            return toast.error("Task already exists")
         }
         const res = todoList.map(item => {
             if (item.id == editableTask) {

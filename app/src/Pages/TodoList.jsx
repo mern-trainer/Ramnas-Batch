@@ -3,6 +3,7 @@ import { FaCheckCircle, FaEdit, FaPen } from "react-icons/fa"
 import { FaCircleXmark, FaList, FaTrash, FaXmark } from "react-icons/fa6"
 import { toast } from "react-toastify"
 import { v4 } from "uuid"
+import TodoListTemplate from "../Components/TodoListTemplate"
 
 const TodoList = () => {
 
@@ -90,60 +91,8 @@ const TodoList = () => {
             </div>
             
             <div className="d-flex flex-column flex-md-row gap-4 w-100">
-                <div className="d-flex flex-column gap-2 mt-3 w-100">
-                    <h3 className="text-center">Pending List ({todoList.filter(item => item.status == "Pending").length})</h3>
-                    {
-                        todoList.filter(item => item.status == "Pending").map((data) => {
-                            return <div key={data.id} className="d-flex border border-2 border-secondary justify-content-between rounded p-3 text-secondary">
-                                <div>
-                                    <div>
-                                        {
-                                            // Optional Chaining
-                                            editableTask == data?.id ? <Fragment>
-                                                <input type="text" value={editedTitle} onChange={(e) => setEditedTitle(e.target.value)} />
-                                                <button className="btn btn-success" onClick={handleTaskUpdate}>Save</button>
-                                            </Fragment> : data.title
-                                        }
-                                    </div>
-                                    <div>{data.status}</div>
-                                    <div>{data.createdAt}</div>
-                                    <div>{data.updatedAt}</div>
-                                </div>
-                                <div className="d-flex flex-column align-items-center justify-content-around">
-                                    <FaTrash color="red" cursor={"pointer"} onClick={() => handleDelete(data.id)} />
-                                    <FaCheckCircle color="green" cursor={"pointer"} onClick={() => handleStatus(data.id)}/>    
-                                    <FaPen color="blue" cursor={"pointer"} onClick={() => { setEditableTask(data.id); setEditedTitle(data.title) }}/>
-                                </div>
-                            </div>
-                        })
-                    }
-                </div>
-                <div className="d-flex flex-column gap-2 mt-3 w-100">
-                    <h3 className="text-center">Completed List ({todoList.filter(item => item.status == "Completed").length})</h3>
-                    {
-                        todoList.filter(item => item.status == "Completed").map((data) => {
-                            return <div key={data.id} className="d-flex border border-2 border-secondary justify-content-between rounded p-3 text-secondary">
-                                <div>
-                                    <div>
-                                        {
-                                            // Optional Chaining
-                                            editableTask == data?.id ? <Fragment>
-                                                <input type="text" value={editedTitle} onChange={(e) => setEditedTitle(e.target.value)} />
-                                                <button className="btn btn-success" onClick={handleTaskUpdate}>Save</button>
-                                            </Fragment> : data.title
-                                        }
-                                    </div>
-                                    <div>{data.status}</div>
-                                    <div>{data.createdAt}</div>
-                                    <div>{data.updatedAt}</div>
-                                </div>
-                                <div className="d-flex flex-column align-items-center justify-content-around">
-                                    <FaCircleXmark color="red" cursor={"pointer"} onClick={() => handleStatus(data.id)}/>    
-                                </div>
-                            </div>
-                        })
-                    }
-                </div>
+                <TodoListTemplate type="Pending" setEditableTask={setEditableTask} editableTask={editableTask} editedTitle={editedTitle} setEditedTitle={setEditedTitle} handleDelete={handleDelete} handleStatus={handleStatus} handleTaskUpdate={handleTaskUpdate} todoList={todoList} />
+                <TodoListTemplate type="Completed" setEditableTask={setEditableTask} editableTask={editableTask} editedTitle={editedTitle} setEditedTitle={setEditedTitle} handleDelete={handleDelete} handleStatus={handleStatus} handleTaskUpdate={handleTaskUpdate} todoList={todoList} />
             </div>
         </div>
     </div>

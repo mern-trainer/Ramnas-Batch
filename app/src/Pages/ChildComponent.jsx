@@ -1,7 +1,7 @@
 const ChildComponent = ({ counter, setCounter, handleDataFromChild }) => {
     
-    return <div>
-        <button onClick={() => setCounter((prev) => prev + 1)}>Call</button>
+    return <div className="w-25">
+        <button className="btn btn-danger w-100" onClick={() => setCounter((prev) => prev - 1)}>Decrement</button>
     </div>
 }
 

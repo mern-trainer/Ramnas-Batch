@@ -21,8 +21,8 @@ const App = () => {
    return <Fragment>
       {/* <States /> */}
       {/* <Mapping /> */}
-      {/* <TodoList /> */}
-      <ParentComponent />
+      <TodoList />
+      {/* <ParentComponent /> */}
       {/* <PasswordGenerator /> */}
       {/* <Responsive /> */}
       {/* <Navbar expand="lg" className="bg-body-tertiary">

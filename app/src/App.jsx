@@ -14,13 +14,15 @@ import States from "./Pages/states"
 import PasswordGenerator from "./Pages/PasswordGenerator"
 import Mapping from "./Pages/Mapping"
 import TodoList from "./Pages/TodoList"
+import ParentComponent from "./Pages/ParentComponent"
 
 const App = () => {
 
    return <Fragment>
       {/* <States /> */}
       {/* <Mapping /> */}
-      <TodoList />
+      {/* <TodoList /> */}
+      <ParentComponent />
       {/* <PasswordGenerator /> */}
       {/* <Responsive /> */}
       {/* <Navbar expand="lg" className="bg-body-tertiary">

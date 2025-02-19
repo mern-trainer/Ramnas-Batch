@@ -1,0 +1,5 @@
+1. Create a home page / landing page for user management app. 
+2. Create a list of users page. [can delete a user info]
+3. Create an about page for user management app.
+4. Create a contact page for user management app.
+5. Create a 404 page for user management app.

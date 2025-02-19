@@ -2,6 +2,7 @@
 // Hooks => function to handle life cycle and states in a component
 
 import { useState } from "react";
+import { Link } from "react-router";
 
 const States = () => {
 
@@ -21,6 +22,7 @@ const States = () => {
     }
 
     return <div className="d-flex flex-column align-items-center gap-3 mt-4">
+        <Link to="/password-generate">Go to passwords</Link>
         <div className="fs-3 fw-bold">{counters.one}</div>
         <div className="d-flex gap-2">
             <button onClick={() => handleClick("one", "+")} className="btn btn-success">Increment</button>

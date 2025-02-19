@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router"
 
 const PasswordGenerator = () => {
 
@@ -19,6 +20,7 @@ const PasswordGenerator = () => {
     }
 
     return <div className="d-flex flex-column align-items-center gap-3 mt-4">
+        <Link to="/todo">Go to todo</Link>
         <h1>Password Generator</h1>
         <div>{password}</div>
         <button onClick={handlePasswordGenerator}>Generate Password</button>

@@ -4,6 +4,7 @@ import { FaCircleXmark, FaList, FaTrash, FaXmark } from "react-icons/fa6"
 import { toast } from "react-toastify"
 import { v4 } from "uuid"
 import TodoListTemplate from "../Components/TodoListTemplate"
+import { Link } from "react-router"
 
 const TodoList = () => {
 
@@ -78,6 +79,7 @@ const TodoList = () => {
     return <div className="d-flex justify-content-center pt-4 px-2">
         <div className="w-100 d-flex flex-column align-items-center">
             <h1 className="fs-3 text-center">Todo List</h1>
+            <Link to="/states">Go to states</Link>
             <div className="mt-3 w-100" style={{maxWidth: "500px"}}>
                 <form onSubmit={handleSubmit} className="d-flex gap-2 flex-column">
                     <div className="bg-light d-flex align-items-center rounded border border-2 border-secondary rounded">

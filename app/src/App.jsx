@@ -24,6 +24,10 @@ const App = () => {
    return <BrowserRouter>
       <Routes>
          <Route path="/todo" Component={TodoList}/>
+         <Route path="/password-generate" element={<PasswordGenerator />}/>
+         <Route path="/states" element={<States />} />
+         
+         <Route path="*" element={<div className="vh-100 d-flex justify-content-center align-items-center">404 | Page not found</div>} />
       </Routes>
    </BrowserRouter>
 

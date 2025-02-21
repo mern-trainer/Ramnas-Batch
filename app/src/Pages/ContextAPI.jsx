@@ -1,0 +1,20 @@
+// context api -> To share data between components -> global state management
+// props -> Unidirectional Data Flow -> Parent to Child
+
+import { useContext } from "react"
+import { Link } from "react-router"
+import { SampleContext } from "../App"
+
+const ContextAPI = () => {
+
+    const { counter } = useContext(SampleContext)
+
+
+    return <div>
+        <h1>Context API</h1>
+        {counter}<br/>
+        <Link to={"/context2"}>Go to 2nd Context Page</Link>
+    </div>
+}
+
+export default ContextAPI

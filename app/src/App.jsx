@@ -1,4 +1,4 @@
-import { Fragment } from "react"
+import { createContext, Fragment, useState } from "react"
 import Header from "./Components/Header"
 import HeroSection from "./Components/HeroSection"
 import Explore from "./Components/Explore"
@@ -16,20 +16,29 @@ import Mapping from "./Pages/Mapping"
 import TodoList from "./Pages/TodoList"
 import ParentComponent from "./Pages/ParentComponent"
 import { BrowserRouter, Routes, Route } from "react-router"
+import ContextAPI from "./Pages/ContextAPI"
+import SecondContext from "./Pages/SecondContext"
 
 // react-router package
+export const SampleContext = createContext()
 
 const App = () => {
 
-   return <BrowserRouter>
-      <Routes>
-         <Route path="/todo" Component={TodoList}/>
-         <Route path="/password-generate" element={<PasswordGenerator />}/>
-         <Route path="/states" element={<States />} />
-         
-         <Route path="*" element={<div className="vh-100 d-flex justify-content-center align-items-center">404 | Page not found</div>} />
-      </Routes>
-   </BrowserRouter>
+   const [counter, setCounter] = useState(0)
+
+   return <SampleContext.Provider value={{ counter, setCounter }}>
+      <BrowserRouter>
+         <Routes>
+            <Route path="/todo" Component={TodoList}/>
+            <Route path="/password-generate" element={<PasswordGenerator />}/>
+            <Route path="/states" element={<States />} />
+            <Route path="/context" Component={ContextAPI} />
+            <Route path="/context2" Component={SecondContext} />
+            
+            <Route path="*" element={<div className="vh-100 d-flex justify-content-center align-items-center">404 | Page not found</div>} />
+         </Routes>
+      </BrowserRouter>
+   </SampleContext.Provider>
 
 }
 

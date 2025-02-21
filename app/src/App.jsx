@@ -19,15 +19,9 @@ import { BrowserRouter, Routes, Route } from "react-router"
 import ContextAPI from "./Pages/ContextAPI"
 import SecondContext from "./Pages/SecondContext"
 
-// react-router package
-export const SampleContext = createContext()
-
 const App = () => {
 
-   const [counter, setCounter] = useState(0)
-
-   return <SampleContext.Provider value={{ counter, setCounter }}>
-      <BrowserRouter>
+   return <BrowserRouter>
          <Routes>
             <Route path="/todo" Component={TodoList}/>
             <Route path="/password-generate" element={<PasswordGenerator />}/>
@@ -38,7 +32,6 @@ const App = () => {
             <Route path="*" element={<div className="vh-100 d-flex justify-content-center align-items-center">404 | Page not found</div>} />
          </Routes>
       </BrowserRouter>
-   </SampleContext.Provider>
 
 }
 

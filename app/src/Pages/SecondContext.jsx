@@ -1,10 +1,10 @@
 import { useContext } from "react"
 import { Link } from "react-router"
-import { SampleContext } from "../App"
+import { useCounter } from "../Providers/CounterProvider"
 
 const SecondContext = () => {
 
-    const { setCounter } = useContext(SampleContext)
+    const { setCounter } = useCounter()
 
     return <div>
         <h1>Second Context</h1>

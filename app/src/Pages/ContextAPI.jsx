@@ -1,14 +1,12 @@
 // context api -> To share data between components -> global state management
 // props -> Unidirectional Data Flow -> Parent to Child
 
-import { useContext } from "react"
 import { Link } from "react-router"
-import { SampleContext } from "../App"
+import { useCounter } from "../Providers/CounterProvider"
 
 const ContextAPI = () => {
 
-    const { counter } = useContext(SampleContext)
-
+    const { counter } = useCounter()
 
     return <div>
         <h1>Context API</h1>

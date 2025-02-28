@@ -14,13 +14,21 @@ const EffectPage = () => {
     const [counter, setCounter] = useState(0)
     const [timer, setTimer] = useState(0)
 
-    useEffect(() => { // mounting
+    useEffect(() => {
         console.log(counter);
-    }, [])
+    }, [counter]) // dependency array -> updating stage
 
     return <div className="d-flex align-items-center gap-3 justify-content-center vh-100">
-        <button className="btn btn-success" onClick={() => setCounter((prev) => prev + 1)}>Increment</button>
-        <button className="btn btn-danger" onClick={() => setTimer((prev) => prev + 1)}>Timer</button>
+        <div className="d-flex flex-column gap-3">
+            <div className="fs-3 fw-bold">
+                <div>Counter: {counter}</div>
+                <div>Timer: {timer}</div>
+            </div>
+            <div className="d-flex gap-3">
+                <button className="btn btn-success" onClick={() => setCounter((prev) => prev + 1)}>Increment</button>
+                <button className="btn btn-danger" onClick={() => setTimer((prev) => prev + 1)}>Timer</button>
+            </div>
+        </div>
     </div>
 }
 

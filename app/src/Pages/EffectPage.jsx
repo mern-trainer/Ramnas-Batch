@@ -10,30 +10,26 @@
 import { useEffect, useState } from "react"
 
 const EffectPage = () => {
-    
-    const [counter, setCounter] = useState(0)
-    const [timer, setTimer] = useState(0)
 
-    useEffect(() => { // mounting
-        const interval = setInterval(() => {
-            setTimer((prev) => prev + 1)
-        }, 1000);
-        return () => { // mounting / cleanup function
-            clearInterval(interval)
+    const [axes, setAxes] = useState({ x: 0, y: 0 })
+
+    const handleMouseMove = (event) => {
+        setAxes({ x: event.clientX, y: event.clientY })
+    }
+
+    useEffect(() => { 
+        document.addEventListener("mousemove", handleMouseMove)
+        return () => {
+            document.removeEventListener("mousemove", handleMouseMove)
         }
-    }, [counter])
+    }, [])
 
     return <div className="d-flex align-items-center gap-3 justify-content-center vh-100">
-        <div className="d-flex flex-column gap-3">
-            <div className="fs-3 fw-bold">
-                <div>Counter: {counter}</div>
-                <div>Timer: {timer}</div>
-            </div>
-            <div className="d-flex gap-3">
-                <button className="btn btn-success" onClick={() => setCounter((prev) => prev + 1)}>Increment</button>
-                <button className="btn btn-danger" onClick={() => setTimer((prev) => prev + 1)}>Timer</button>
-            </div>
+        <div>
+            <div>x: {axes.x}</div>
+            <div>y: {axes.y}</div>
         </div>
+        <div className="bg-danger rounded-circle position-absolute" style={{ width: "10px", height: "10px", left: `${axes.x}px`, top: `${axes.y}px`}}></div>
     </div>
 }
 

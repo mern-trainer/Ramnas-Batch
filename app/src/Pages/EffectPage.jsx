@@ -5,7 +5,7 @@
 // 3 stages of life cycle of a component -> mounting, updating, unmounting
 // mounting -> called after component is rendered for the first time
 // updating -> called when component is updated
-// unmounting -> called when component is removed
+// unmounting -> called before component is removed
 
 import { useEffect, useState } from "react"
 
@@ -16,7 +16,10 @@ const EffectPage = () => {
 
     useEffect(() => {
         console.log(counter);
-    }, [counter]) // dependency array -> updating stage
+        return () => { // cleanup -> unmounting
+            console.log("Cleanup");
+        }
+    }, [counter])
 
     return <div className="d-flex align-items-center gap-3 justify-content-center vh-100">
         <div className="d-flex flex-column gap-3">

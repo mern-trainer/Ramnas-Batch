@@ -12,6 +12,7 @@ import { useEffect, useState } from "react"
 const EffectPage = () => {
 
     const [axes, setAxes] = useState({ x: 0, y: 0 })
+    const [text, setText] = useState("")
 
     const handleMouseMove = (event) => {
         setAxes({ x: event.clientX, y: event.clientY })
@@ -19,13 +20,18 @@ const EffectPage = () => {
 
     useEffect(() => { 
         document.addEventListener("mousemove", handleMouseMove)
+        document.addEventListener("keypress", (e) => setText(text => text + e.key))
+        document.addEventListener("wheel", (e) => console.log(e))
         return () => {
             document.removeEventListener("mousemove", handleMouseMove)
+            document.removeEventListener("keypress", (e) => setText(text => text + e.key))
+            document.removeEventListener("wheel", (e) => console.log(e))
         }
     }, [])
 
     return <div className="d-flex align-items-center gap-3 justify-content-center vh-100">
         <div>
+            {text}
             <div>x: {axes.x}</div>
             <div>y: {axes.y}</div>
         </div>

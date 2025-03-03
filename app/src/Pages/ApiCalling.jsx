@@ -1,6 +1,6 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import { api } from "../axios";
 
 // axios -> library to make api calls
 // http methods -> get, post, put, delete, patch
@@ -19,10 +19,11 @@ const ApiCalling = () => {
         try {
             // const response = await fetch("https://dummyjson.com/users")
             // const res = await response.json()
-            const { data } = await axios.get("https://dummyjson.com/users")
-           setUsers(data.users)
+            const { data } = await api.get("/users")
+            setUsers(data.users)
         } catch (error) {
-            return toast.error(error.message)
+            const err = error.response?.data.message
+            return toast.error(err || error.message)
         }
     }
 

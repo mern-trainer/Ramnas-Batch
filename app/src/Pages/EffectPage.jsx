@@ -5,7 +5,7 @@
 // 3 stages of life cycle of a component -> mounting, updating, unmounting
 // mounting -> called after component is rendered for the first time
 // updating -> called when component is updated
-// unmounting -> called before component is removed
+// unmounting -> called before component is removed -> cleanup function
 
 import { useEffect, useState } from "react"
 
@@ -17,6 +17,8 @@ const EffectPage = () => {
     const handleMouseMove = (event) => {
         setAxes({ x: event.clientX, y: event.clientY })
     }
+
+    
 
     useEffect(() => { 
         document.addEventListener("mousemove", handleMouseMove)

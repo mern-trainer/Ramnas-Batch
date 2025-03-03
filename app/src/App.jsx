@@ -19,6 +19,7 @@ import { BrowserRouter, Routes, Route } from "react-router"
 import ContextAPI from "./Pages/ContextAPI"
 import SecondContext from "./Pages/SecondContext"
 import EffectPage from "./Pages/EffectPage"
+import ApiCalling from "./Pages/ApiCalling"
 
 const App = () => {
 
@@ -29,7 +30,8 @@ const App = () => {
             <Route path="/states" element={<States />} />
             <Route path="/context" Component={ContextAPI} />
             <Route path="/context2" Component={SecondContext} />
-            <Route path="/effect" Component={EffectPage} />   
+            <Route path="/effect" Component={EffectPage} /> 
+            <Route path="/api" Component={ApiCalling} />
          
             <Route path="*" element={<div className="vh-100 d-flex justify-content-center align-items-center">404 | Page not found</div>} />
          </Routes>

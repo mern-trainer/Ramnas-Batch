@@ -20,19 +20,32 @@ import ContextAPI from "./Pages/ContextAPI"
 import SecondContext from "./Pages/SecondContext"
 import EffectPage from "./Pages/EffectPage"
 import ApiCalling from "./Pages/ApiCalling"
+import Params from "./Pages/params"
+import SingleUserView from "./Pages/SingleUserView"
 
 const App = () => {
 
    return <BrowserRouter>
          <Routes>
-            <Route path="/todo" Component={TodoList}/>
-            <Route path="/password-generate" element={<PasswordGenerator />}/>
-            <Route path="/states" element={<States />} />
-            <Route path="/context" Component={ContextAPI} />
-            <Route path="/context2" Component={SecondContext} />
-            <Route path="/effect" Component={EffectPage} /> 
-            <Route path="/api" Component={ApiCalling} />
-         
+            <Route path="/">
+               <Route path="todo" Component={TodoList}/>
+               <Route path="password-generate" element={<PasswordGenerator />}/>
+               <Route path="states" element={<States />} />
+               <Route path="context" Component={ContextAPI} />
+            <Route path="react">
+                  <Route path="" element={<div>React</div>} />
+                  <Route path="context2" Component={SecondContext} />
+                  <Route path="effect" Component={EffectPage} /> 
+                  <Route path="api" Component={ApiCalling} />
+            </Route>
+            <Route path="params">
+               <Route path=":data/:id?" Component={Params} />
+            </Route>
+            <Route path="view">
+               <Route path=":id?" Component={SingleUserView} />
+            </Route>
+               {/* Nested Route */}
+            </Route>
             <Route path="*" element={<div className="vh-100 d-flex justify-content-center align-items-center">404 | Page not found</div>} />
          </Routes>
       </BrowserRouter>

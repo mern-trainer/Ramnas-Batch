@@ -22,6 +22,8 @@ import EffectPage from "./Pages/EffectPage"
 import ApiCalling from "./Pages/ApiCalling"
 import Params from "./Pages/params"
 import SingleUserView from "./Pages/SingleUserView"
+import ShopPage from "./Pages/ShopPage"
+import CartPage from "./Pages/CartPage"
 
 const App = () => {
 
@@ -32,19 +34,23 @@ const App = () => {
                <Route path="password-generate" element={<PasswordGenerator />}/>
                <Route path="states" element={<States />} />
                <Route path="context" Component={ContextAPI} />
-            <Route path="react">
-                  <Route path="" element={<div>React</div>} />
-                  <Route path="context2" Component={SecondContext} />
-                  <Route path="effect" Component={EffectPage} /> 
-                  <Route path="api" Component={ApiCalling} />
-            </Route>
-            <Route path="params">
-               <Route path=":data/:id?" Component={Params} />
-            </Route>
-            <Route path="view">
-               <Route path=":id?" Component={SingleUserView} />
-            </Route>
-               {/* Nested Route */}
+               <Route path="react">
+                     <Route path="" element={<div>React</div>} />
+                     <Route path="context2" Component={SecondContext} />
+                     <Route path="effect" Component={EffectPage} /> 
+                     <Route path="api" Component={ApiCalling} />
+               </Route>
+               <Route path="params">
+                  <Route path=":data/:id?" Component={Params} />
+               </Route>
+               <Route path="view">
+                  <Route path=":id?" Component={SingleUserView} />
+               </Route>
+            {/* Nested Route */}
+               <Route path="shop">
+               <Route path="" Component={ShopPage} />
+               <Route path="cart" Component={CartPage} />
+               </Route>
             </Route>
             <Route path="*" element={<div className="vh-100 d-flex justify-content-center align-items-center">404 | Page not found</div>} />
          </Routes>

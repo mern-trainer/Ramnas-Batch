@@ -6,9 +6,13 @@
 
 import { configureStore } from "@reduxjs/toolkit"
 import { sampleReducer } from "./sampleSlice"
+import { counterReducer } from "./counterSlice"
+import { todoReducer } from "./TodoSlice"
 
 export const store = configureStore({
     reducer: {
-        sample: sampleReducer
+        sample: sampleReducer,
+        counter: counterReducer,
+        todo: todoReducer
     }
 })

@@ -24,6 +24,7 @@ import Params from "./Pages/params"
 import SingleUserView from "./Pages/SingleUserView"
 import ShopPage from "./Pages/ShopPage"
 import CartPage from "./Pages/CartPage"
+import ReduxPage from "./Pages/ReduxPage"
 
 const App = () => {
 
@@ -31,7 +32,8 @@ const App = () => {
          <Routes>
             <Route path="/">
                <Route path="todo" Component={TodoList}/>
-               <Route path="password-generate" element={<PasswordGenerator />}/>
+            <Route path="password-generate" element={<PasswordGenerator />} />
+            <Route path="redux" Component={ReduxPage} />
                <Route path="states" element={<States />} />
                <Route path="context" Component={ContextAPI} />
                <Route path="react">

@@ -25,6 +25,7 @@ import SingleUserView from "./Pages/SingleUserView"
 import ShopPage from "./Pages/ShopPage"
 import CartPage from "./Pages/CartPage"
 import ReduxPage from "./Pages/ReduxPage"
+import Formik from "./Pages/Formik"
 
 const App = () => {
 
@@ -53,7 +54,8 @@ const App = () => {
                <Route path="" Component={ShopPage} />
                <Route path="cart" Component={CartPage} />
                </Route>
-            </Route>
+         </Route>
+         <Route path="formik" Component={Formik} />
             <Route path="*" element={<div className="vh-100 d-flex justify-content-center align-items-center">404 | Page not found</div>} />
          </Routes>
       </BrowserRouter>

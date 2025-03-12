@@ -1,17 +1,20 @@
-import { Fragment, useState } from "react"
-import { FaCheckCircle, FaEdit, FaPen } from "react-icons/fa"
-import { FaCircleXmark, FaList, FaTrash, FaXmark } from "react-icons/fa6"
+import { useState } from "react"
+import {FaList} from "react-icons/fa6"
 import { toast } from "react-toastify"
 import { v4 } from "uuid"
 import TodoListTemplate from "../Components/TodoListTemplate"
 import { Link } from "react-router"
+import { useDispatch, useSelector } from "react-redux"
+import { createTodo, removeTodo, updateTodoStatus, updateTodoTitle } from "../Redux/TodoSlice"
 
 const TodoList = () => {
 
     const [todo, setTodo] = useState("")
-    const [todoList, setTodoList] = useState([])
+    // const [todoList, setTodoList] = useState([])
+    const { todoList } = useSelector(state => state.todo)
     const [editableTask, setEditableTask] = useState("")
     const [editedTitle, setEditedTitle] = useState("")
+    const dispatch = useDispatch()
 
     const handleChange = (event) => setTodo(event.target.value)
 
@@ -32,26 +35,19 @@ const TodoList = () => {
             createdAt: dateTime,
             updatedAt: dateTime
         }
-        setTodoList([taskObj, ...todoList])
+        // setTodoList([taskObj, ...todoList])
+        dispatch(createTodo(taskObj))
         setTodo("")
         return toast.success("Task added successfully")
     }
 
     const handleDelete = id => {
-        const res = todoList.filter((item) => item.id !== id)
-        setTodoList(res)
+        dispatch(removeTodo({ id }))
         return toast.success("Task deleted successfully")
     }
 
     const handleStatus = id => {
-        const res = todoList.map(item => {
-            if (item.id == id) {
-                const dt = new Date().toLocaleString("en-IN").toUpperCase()
-                return { ...item, status: item.status == "Pending" ? "Completed" : "Pending", updatedAt: dt }
-            }
-            return item
-        })
-        setTodoList(res)
+        dispatch(updateTodoStatus({ id }))
         return toast.success("Task status updated successfully")
     }
 
@@ -63,14 +59,7 @@ const TodoList = () => {
         if (index > -1) {
             return toast.error("Task already exists")
         }
-        const res = todoList.map(item => {
-            if (item.id == editableTask) {
-                const dt = new Date().toLocaleString("en-IN").toUpperCase()
-                return {...item, title: editedTitle, updatedAt: dt}
-            }
-            return item
-        })
-        setTodoList(res)
+        dispatch(updateTodoTitle({ id: editableTask, title: editedTitle }))
         setEditableTask("")
         setEditedTitle("")
         return toast.success("Task updated successfully")

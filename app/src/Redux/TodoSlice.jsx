@@ -21,9 +21,11 @@ const todoSlice = createSlice({
             const { id, title } = action.payload
             state.todoList = state.todoList.map(todo => {
                 if (todo.id == id) {
+                    const dateTime = new Date().toLocaleString("en-IN").toUpperCase()
                     return {
                         ...todo,
-                        title: title
+                        title: title,
+                        updatedAt: dateTime
                     }
                 }
                 return todo
@@ -34,9 +36,11 @@ const todoSlice = createSlice({
             const { id } = action.payload
             state.todoList = state.todoList.map(todo => {
                 if (todo.id == id) {
+                    const dateTime = new Date().toLocaleString("en-IN").toUpperCase()
                     return {
                         ...todo,
-                        status: todo.status == "Pending" ? "Completed" : "Pending"
+                        status: todo.status == "Pending" ? "Completed" : "Pending",
+                        updatedAt: dateTime
                     }
                 }
                 return todo
@@ -45,5 +49,5 @@ const todoSlice = createSlice({
     }
 })
 
-export const { createTodo, removeTodo, updateTodoTitle } = todoSlice.actions
+export const { createTodo, removeTodo, updateTodoTitle, updateTodoStatus } = todoSlice.actions
 export const { reducer: todoReducer } = todoSlice

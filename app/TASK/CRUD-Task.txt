@@ -1,0 +1,6 @@
+1. Create a restaurant management app.
+  -> Create a list of restaurants page.
+  -> Create a form for adding a new restaurant.
+  -> Create a form for editing a restaurant.
+  -> Should be able to delete a restaurant.
+  -> use redux for state management

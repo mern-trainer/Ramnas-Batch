@@ -4,6 +4,7 @@ import ChildComponent from "./Child"
 // memo, useMemo
 // memo -> Avoid re-rendering of child component
 // useMemo -> Cache the result of a calculation between re-renders
+// useCallback -> Memoize a function
 
 const Optimization = () => {
 

@@ -29,13 +29,22 @@
 
 // os -> operating system -> operating system is a module that provides a way of working with the operating system
 
-const os = require("os")
+// const os = require("os")
 
-console.log(os.version());
-console.log(os.uptime());
-console.log(os.platform());
-console.log(os.release());
-console.log(os.networkInterfaces());
-console.log(os.userInfo());
-console.log(os.type());
+// console.log(os.version());
+// console.log(os.uptime());
+// console.log(os.platform());
+// console.log(os.release());
+// console.log(os.networkInterfaces());
+// console.log(os.userInfo());
+// console.log(os.type());
 
+const dns = require("dns")
+
+// dns -> Domain name system -> dns is a module that provides a way of working with the domain name system
+
+dns.lookup("www.google.com", (err, address, family) => {
+    console.log(address);
+    console.log(family);
+    console.log(err);
+})

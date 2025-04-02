@@ -1,10 +1,9 @@
-// import readline from "readline-sync" 
-const readline = require("readline-sync")
+// const readline = require("readline-sync")
 
-const num1 = readline.questionInt("Enter Number 1:")
-const num2 = readline.questionInt("Enter Number 2:")
+// const num1 = readline.questionInt("Enter Number 1:")
+// const num2 = readline.questionInt("Enter Number 2:")
 
-console.log(`The sum is ${num1 + num2}`)
+// console.log(`The sum is ${num1 + num2}`)
 
 // NodeJS -> Nodejs is a runtime environment for executing JavaScript
 // code outside of a web browser
@@ -25,3 +24,18 @@ console.log(`The sum is ${num1 + num2}`)
 // events -> events module -> events is a module that provides a way of working with events
 // crypto -> crypto module -> crypto is used for encrypting and decrypting data
 // dns -> dns module -> dns is a module that provides a way of working with the domain name system
+
+// os, dns, fs
+
+// os -> operating system -> operating system is a module that provides a way of working with the operating system
+
+const os = require("os")
+
+console.log(os.version());
+console.log(os.uptime());
+console.log(os.platform());
+console.log(os.release());
+console.log(os.networkInterfaces());
+console.log(os.userInfo());
+console.log(os.type());
+

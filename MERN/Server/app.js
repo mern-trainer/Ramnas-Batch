@@ -1,109 +1,35 @@
-// // const readline = require("readline-sync")
+// import http
 
-// // const num1 = readline.questionInt("Enter Number 1:")
-// // const num2 = readline.questionInt("Enter Number 2:")
+const http = require("http")
 
-// // console.log(`The sum is ${num1 + num2}`)
+const server = http.createServer()
 
-// // NodeJS -> Nodejs is a runtime environment for executing JavaScript
-// // code outside of a web browser
+// http status code
 
-// // npm -> Node Package Manager
+// 200 -> OK
+// 201 -> Created
+// 400 -> Bad Request
+// 401 -> Unauthorized
+// 403 -> Forbidden
+// 404 -> Not Found
+// 409 -> Conflict
+// 500 -> Internal server error
 
-// // local Modules or core Modules or Built-in Modules, Third Party Modules
+server.on("request", (request, response) => {
+    
+    const path_name = request.url
+    
+    if (path_name == "/") {
+        response.writeHead(200, {
+            "content-type": "application/json"
+        })
+        return response.end(JSON.stringify({ name: "Rahul", age: 30 }))    
+    }
 
-// // core Modules -> Nodejs comes with core modules -> installation is not required
-
-// // examples of core modules -> fs, path, os, http, url, events, crypto, dns
-
-// // fs -> file system -> file system is a module that provides a way of working with the file system
-// // path -> path module -> path is a module that provides a way of working with file and directory paths
-// // os -> operating system -> operating system is a module that provides a way of working with the operating system
-// // http -> http module -> http is a module that provides a way of working with the http protocol
-// // url -> url module -> url is a module that provides a way of working with the url protocol
-// // events -> events module -> events is a module that provides a way of working with events
-// // crypto -> crypto module -> crypto is used for encrypting and decrypting data
-// // dns -> dns module -> dns is a module that provides a way of working with the domain name system
-
-// // os, dns, fs
-
-// // os -> operating system -> operating system is a module that provides a way of working with the operating system
-
-// // const os = require("os")
-
-// // console.log(os.version());
-// // console.log(os.uptime());
-// // console.log(os.platform());
-// // console.log(os.release());
-// // console.log(os.networkInterfaces());
-// // console.log(os.userInfo());
-// // console.log(os.type());
-
-// // const dns = require("dns")
-
-// // // dns -> Domain name system -> dns is a module that provides a way of working with the domain name system
-
-// // dns.lookup("www.google.com", (err, address, family) => {
-// //     console.log(address);
-// //     console.log(family);
-// //     console.log(err);
-// // })
-
-// // fs -> file system -> file system is a module that provides a way of working with the file system.
-
-const fs = require("fs")
-
-// // create and write a file
-// fs.writeFile("fs_sample.txt", "Hello World", () => {
-//     console.log("File created");
-// })
-
-// // read a file
-// fs.readFile("fs_sample.txt", { encoding: "utf-8" }, (err, text) => {
-//     if (err) {
-//         return console.log(err.message);
-//     }
-//     console.log(text);
-// })
-
-// // Modify a file
-// fs.appendFile("fs_sample.txt", " Hey there", () => {
-//     console.log("File modified");
-// })
-
-// // Delete a file
-// // fs.unlink("fs_sample.txt", () => {
-// //     console.log("File deleted");
-// // })
-
-// // Rename a file
-// fs.rename("fs_sample.txt", "fs.txt", () => {
-//     console.log("File renamed");
-// })
-
-// streams -> Working with files in a more efficient way
-// small chunks of data -> Readable and Writable streams
-
-// readable stream -> Readable stream is a stream that can be read from
-// writable stream -> Writable stream is a stream that can be written to
-
-const readableStream = fs.createReadStream("streams.txt", { encoding: "utf-8" }) 
-const writableStream = fs.createWriteStream("streams_result.txt", { encoding: "utf-8" })
-
-// pipe -> pipe is a method that can be used to pipe a readable stream to a writable stream
-
-// using events
-readableStream.on("data", (chunk) => {
-    writableStream.write("CHUNK: " + chunk)
+    return response.end("404")
 })
 
-readableStream.on("error", (err) => {
-    console.log(err.message);
+server.listen(8080, () => {
+    console.log("Server is running on port 8080");
 })
 
-readableStream.on("end", () => {
-    console.log("Stream ended");
-})
-
-// using pipe()
-readableStream.pipe(writableStream)

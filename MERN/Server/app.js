@@ -1,6 +1,7 @@
 // import http
 
 const http = require("http")
+const url = require("url")
 
 const server = http.createServer()
 
@@ -17,16 +18,11 @@ const server = http.createServer()
 
 server.on("request", (request, response) => {
     
-    const path_name = request.url
+    const method = request.method
+    const { pathname, query } = url.parse(request.url, true)
+    const { hi, hello } = query
+    response.end(hi + " " + hello)
     
-    if (path_name == "/") {
-        response.writeHead(200, {
-            "content-type": "application/json"
-        })
-        return response.end(JSON.stringify({ name: "Rahul", age: 30 }))    
-    }
-
-    return response.end("404")
 })
 
 server.listen(8080, () => {

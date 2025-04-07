@@ -1,99 +1,36 @@
-// import http
+// express -> to create server
 
-const http = require("http")
-const url = require("url")
-const { v4: uuidv4 } = require("uuid")
+// express -> Framework for node js
+// npm i express
 
-const server = http.createServer()
+// features
+// 1. Easy Routing -> Routing
+// 2. Middleware -> Functions that run between request and response
+// 3. Static files -> Serve static files
+// 4. request and response -> objects that contain information about request and response.
 
-// http status code
+// create a server
 
-// 200 -> OK
-// 201 -> Created
-// 400 -> Bad Request
-// 401 -> Unauthorized
-// 403 -> Forbidden
-// 404 -> Not Found
-// 409 -> Conflict
-// 500 -> Internal server error
+const express = require("express")
 
-let todoList = []
+const app = express()
 
-server.on("request", (request, response) => {
-    
-    const method = request.method
-    const { pathname: path_name, query } = url.parse(request.url, true)
+app.use(express.json()) // middleware
 
-    if (path_name == "/api/todo" && method == "POST") {
-        const { title, description } = query
-        if (!title || !description) {
-            response.writeHead(400, { "content-type": "application/json" })
-            return response.end(JSON.stringify({ error: "Title and Description are required." }))
-        }
-        const dateTime = new Date().toISOString()
-        const taskObj = {
-            id: uuidv4(),
-            title,
-            description,
-            status: "Pending",
-            createdAt: dateTime,
-            updatedAt: dateTime
-        }
-        todoList.push(taskObj)
-        response.writeHead(201, { "content-type": "application/json" })
-        return response.end(JSON.stringify({ message: "Task created", task: taskObj }))
-    }
+// write and send -> write -> multiple times, send -> one time
 
-    if (path_name == "/api/todo" && method == "GET") {
-        response.writeHead(200, { "content-type": "application/json" })
-        return response.end(JSON.stringify({ message: "Task fetched", tasks: todoList }))
-    }
-
-    if (path_name == "/api/todo" && method == "DELETE") {
-        const { id } = query
-        if (!id) {
-            response.writeHead(400, { "content-type": "application/json" })
-            return response.end(JSON.stringify({ error: "Id is required" }))
-        }
-        const index = todoList.findIndex(todo => todo.id == id)
-        if (index == -1) {
-            response.writeHead(404, { "content-type": "application/json" })
-            return response.end(JSON.stringify({ error: "Task does not exist" }))
-        }
-        const res = todoList.splice(index, 1)
-        response.writeHead(200, { "content-type": "application/json" })
-        return response.end(JSON.stringify({ message: "task deleted", deleted: res }))
-    }
-
-    if (path_name == "/api/todo" && method == "PATCH") {
-        const { id, title, description, status } = query
-        if (!id) {
-            response.writeHead(400, { "content-type": "application/json" })
-            return response.end(JSON.stringify({ error: "Id is required" }))
-        }
-        const obj = {}
-        if (title) obj.title = title
-        if (description) obj.description = description
-        if (status) obj.status = status
-        if (title || description || status) {
-            obj.updatedAt = new Date().toISOString()
-        }
-        if(!title && !description && !status) {
-            response.writeHead(400, { "content-type": "application/json" })
-            return response.end(JSON.stringify({ error: "Title, Description or Status required." }))
-        }
-        const index = todoList.findIndex(todo => todo.id == id)
-        if (index == -1) {
-            response.writeHead(404, { "content-type": "application/json" })
-            return response.end(JSON.stringify({ error: "Task does not exist" }))
-        }
-        todoList[index] = { ...todoList[index], ...obj }
-        response.writeHead(200, { "content-type": "application/json" })
-        return response.end(JSON.stringify({ message: "task updated", updated: todoList[index] }))
-    }
+app.get("/:id", (request, response) => {
+    // const query = request.query.q -> accessing query parameters
+    // const params = request.params.id -> accessing route parameters
+    return response.status(200).send("params")
 })
 
-server.listen(8080, () => {
+app.post("/", (request, response) => {
+    const body = request.body
+    return response.status(200).send(body)
+})
+
+app.listen(8080, () => {
     console.log("Server is running on port 8080");
 })
 

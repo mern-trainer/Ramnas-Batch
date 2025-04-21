@@ -1,63 +1,43 @@
-// // express -> to create server
+const express = require("express");
+const logger = require("./Middleware/Logger");
 
-// // express -> Framework for node js
-// // npm i express
+const app = express();
 
-// // features
-// // 1. Easy Routing -> Routing
-// // 2. Middleware -> Functions that run between request and response
-// // 3. Static files -> Serve static files
-// // 4. request and response -> objects that contain information about request and response.
+// app.use() // middleware
 
-// // create a server
+// Middleware -> function that has access to the request object (req),
+// the response object (res), and the next middleware function in the application’s
+// request-response cycle. The next middleware function is commonly denoted by a
+// variable named next.
 
-// const express = require("express")
+// middleware will be executed in every request.
 
-// const app = express()
+// const sampleMiddleware = (request, response, next) => {
+//     console.log("Sample middleware executed");
+//     next(); // call next middleware function
+// }
 
-// app.use(express.json()) // middleware
+// app.use(sampleMiddleware) // application middleware
 
-// // write and send -> write -> multiple times, send -> one time
+// Authentication middleware
+// Authorization middleware
+// Error handling middleware
 
-// app.get("/:id", (request, response) => {
-//     // const query = request.query.q -> accessing query parameters
-//     // const params = request.params.id -> accessing route parameters
-//     return response.status(200).send("params")
-// })
+// Type of middleware
 
-// app.post("/", (request, response) => {
-//     const body = request.body
-//     return response.status(200).send(body)
-// })
+// 1. Application level middleware
+// 2. Router level middleware
+// 3. Error handling middleware
+// 4. Built-in middleware
+// 5. Third-party middleware
+// 6. Custom middleware
 
-// app.listen(9090, () => {
-//     console.log("Server is running on port 9090");
-// })
+app.use(logger)
 
-const express = require("express")
-require("dotenv").config()  // to access environment variables
-const cors = require("cors")
-
-// cors -> cross origin resource sharing
-
-const app = express()
-
-app.use(express.json())
-app.use(cors())
-
-app.get("/api", (request, response) => {
-    try {
-        const randomNumber = Math.floor(Math.random() * (100 - 1)) + 1
-        return response.status(200).send({
-            number: randomNumber
-        })
-    } catch (error) {
-        return response.status(500).send({
-            message: "Internal server error"
-        })   
-    }
+app.get("/", (request, response) => {
+    response.status(200).send("Hello World");
 })
 
-app.listen(process.env.PORT || 9090, () => {
-    console.log(`Server is running on port ${process.env.PORT || 9090}`);
+app.listen(8080, () => {
+    console.log("Server is running on port 8080");
 })

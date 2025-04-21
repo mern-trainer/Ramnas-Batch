@@ -1,5 +1,7 @@
 const express = require("express");
 const logger = require("./Middleware/Logger");
+const apiRoute = require("./Routes/api.route");
+const sampleRoute = require("./Routes/sample.route");
 
 const app = express();
 
@@ -33,10 +35,12 @@ const app = express();
 // 6. Custom middleware
 
 app.use(logger)
+app.use("/api", apiRoute)
+app.use("/api2", sampleRoute)
 
-app.get("/", (request, response) => {
-    response.status(200).send("Hello World");
-})
+// app.get("/", (request, response) => {
+//     response.status(200).send("Hello World");
+// })
 
 app.listen(8080, () => {
     console.log("Server is running on port 8080");

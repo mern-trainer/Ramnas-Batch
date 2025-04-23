@@ -2,6 +2,7 @@ const express = require("express");
 const logger = require("./Middleware/Logger");
 const apiRoute = require("./Routes/api.route");
 const sampleRoute = require("./Routes/sample.route");
+const passwordRoute = require("./Routes/password.route");
 
 const app = express();
 
@@ -34,13 +35,18 @@ const app = express();
 // 5. Third-party middleware
 // 6. Custom middleware
 
+app.use(express.json()); // built-in middleware
 app.use(logger)
 app.use("/api", apiRoute)
 app.use("/api2", sampleRoute)
+app.use("/password", passwordRoute)
 
 // app.get("/", (request, response) => {
 //     response.status(200).send("Hello World");
 // })
+
+// password encryption, decryption -> hashing
+// bcrypt is used for hashing passwords
 
 app.listen(8080, () => {
     console.log("Server is running on port 8080");

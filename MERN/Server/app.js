@@ -4,6 +4,11 @@ const apiRoute = require("./Routes/api.route");
 const sampleRoute = require("./Routes/sample.route");
 const passwordRoute = require("./Routes/password.route");
 const authRoute = require("./Routes/auth.route");
+require("dotenv").config();
+const cors = require("cors");
+
+
+// cors error -> cross origin resource sharing
 
 // authentication and authorization
 
@@ -39,7 +44,11 @@ const app = express();
 // 4. Built-in middleware
 // 5. Third-party middleware
 // 6. Custom middleware
-
+// app.use(cors({
+//     origin: "http://localhost:5173",
+//     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+// }))
+app.use(cors())
 app.use(express.json()); // built-in middleware
 app.use(logger)
 app.use("/api", apiRoute)
@@ -54,6 +63,6 @@ app.use("/auth", authRoute)
 // password encryption, decryption -> hashing
 // bcrypt is used for hashing passwords
 
-app.listen(8080, () => {
-    console.log("Server is running on port 8080");
+app.listen(process.env.PORT || 9090, () => {
+    console.log("Server is running on port " + process.env.PORT || 9090);
 })

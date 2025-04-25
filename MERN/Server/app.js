@@ -3,6 +3,11 @@ const logger = require("./Middleware/Logger");
 const apiRoute = require("./Routes/api.route");
 const sampleRoute = require("./Routes/sample.route");
 const passwordRoute = require("./Routes/password.route");
+const authRoute = require("./Routes/auth.route");
+
+// authentication and authorization
+
+// token -> jsonwebtoken (jwt) -> user details encrypted in token
 
 const app = express();
 
@@ -40,6 +45,7 @@ app.use(logger)
 app.use("/api", apiRoute)
 app.use("/api2", sampleRoute)
 app.use("/password", passwordRoute)
+app.use("/auth", authRoute)
 
 // app.get("/", (request, response) => {
 //     response.status(200).send("Hello World");

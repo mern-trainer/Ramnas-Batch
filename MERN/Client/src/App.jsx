@@ -4,6 +4,7 @@ import Todo from "./Pages/Todo"
 import Optimization from "./Pages/Optimization"
 import Callback from "./Pages/Callback"
 import CheckApi from "./Pages/CheckApi"
+import SignupPage from "./Pages/SignupPage"
 
 const App = () => {
     return <BrowserRouter>
@@ -13,6 +14,7 @@ const App = () => {
             <Route path="/optimization" Component={Optimization} />
             <Route path="/callback" Component={Callback} />
             <Route path="/api" Component={CheckApi} />
+            <Route path="/signup" Component={SignupPage} />
         </Routes>
     </BrowserRouter>
 }

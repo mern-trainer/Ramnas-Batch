@@ -5,6 +5,7 @@ import Optimization from "./Pages/Optimization"
 import Callback from "./Pages/Callback"
 import CheckApi from "./Pages/CheckApi"
 import SignupPage from "./Pages/SignupPage"
+import CheckAuth from "./Pages/CheckAuth"
 
 const App = () => {
     return <BrowserRouter>
@@ -15,6 +16,7 @@ const App = () => {
             <Route path="/callback" Component={Callback} />
             <Route path="/api" Component={CheckApi} />
             <Route path="/signup" Component={SignupPage} />
+            <Route path="/check-auth" Component={CheckAuth} />
         </Routes>
     </BrowserRouter>
 }

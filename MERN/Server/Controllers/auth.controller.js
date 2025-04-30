@@ -4,7 +4,7 @@ require("dotenv").config()
 
 const users = []
 
-const handleLogin = async (request, response) => {
+const handleSignup = async (request, response) => {
     try {
         const { name, username, email, password } = request.body;
         if (!name || !username || !email || !password) {
@@ -40,6 +40,19 @@ const handleLogin = async (request, response) => {
     }
 }
 
+const handleLogin = async (request, response) => {
+    try {
+        return response.status(200).send({
+            message: "User logged in successfully."
+        })
+    } catch (err) {
+        return response.status(500).send({
+            message: err.message || "Some error occurred while logging in."
+        })   
+    }
+}
+
 module.exports = {
+    handleSignup,
     handleLogin
 }

@@ -2,11 +2,11 @@
    - name (string): Student's full name
    - age (number): Student's age
    - department (string): Student's department/major
-   - rollNo (string): Unique student ID
+   - rollNo (number): Unique student ID
    - grade (number): Current grade/year
    - contact (object):
      - email (string)
-     - phone (string)
+     - phone (number)
 
 2. Create an employees collection with the following fields:
    - name (string): Employee's full name  
@@ -17,7 +17,7 @@
    - joinDate (date): Date of joining
    - contact (object):
      - email (string)
-     - phone (string)
+     - phone (number)
 
 3. Array of employees:
 [

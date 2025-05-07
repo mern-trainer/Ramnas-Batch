@@ -10,13 +10,9 @@ app.use(express.json());
 
 app.get("/users", async (req, res) => {
     try {
-        db().then(async database => {
-            const result = await database.collection("users").find().toArray();
-            return res.status(200).send({
-                message: "Users fetched successfully",
-                data: result
-            })
-        })
+        const database = await db()
+        const users = await database.collection("users").find().toArray();
+        return res.status(200).send(users);
     } catch (err) {
         return res.status(500).send({
             message: err.message || "Internal server error"

@@ -7,6 +7,7 @@ const authRoute = require("./Routes/auth.route");
 require("dotenv").config();
 const cors = require("cors");
 
+require("./Config/db")
 
 // cors error -> cross origin resource sharing
 

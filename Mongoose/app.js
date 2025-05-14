@@ -2,6 +2,7 @@ const express = require("express")
 const env = require("./env")
 const configDB = require("./config/db")
 const TodoModel = require("./models/todo.model")
+const otpRouter = require("./routes/otp.route")
 
 const app = express()
 
@@ -19,6 +20,8 @@ app.get("/todo", async (req, res) => {
         })
     }
 })
+
+app.use("/mail", otpRouter)
 
 app.listen(env.port, () => {
     console.log(`Server is running on port ${env.port}`)

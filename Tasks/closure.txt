@@ -1,0 +1,10 @@
+1. Write a function that returns another function, which adds a given number to its argument. Demonstrate its use by creating an adder function.
+
+2. Create a function that returns a counter function. The counter function should have two methods: `increment` and `getValue`. Initialize the counter at zero and demonstrate its usage.
+
+3. Implement a function that returns a function to cache results of a computationally expensive operation. The returned function should use closure to store previously computed results.
+
+4. Write a function that returns a function to generate unique IDs. Demonstrate how each call to the function results in a unique ID.
+
+5. Implement a function that takes an initial balance as an argument and returns a closure that represents a bank account. The closure should have methods for `deposit`, `withdraw`, and `getBalance`, demonstrating encapsulation using closure.
+

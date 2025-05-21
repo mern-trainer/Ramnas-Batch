@@ -1,0 +1,30 @@
+Question: How would you implement form validation for a user registration form with the following fields: name, username, email, number, password, and confirm password?
+
+Answer:
+1. Name:
+    - Required: The name field should not be empty.
+    - Length: The name should be between 4 and 25 characters.
+    - Characters: The name should only contain alphabetic characters and spaces. (optional)
+
+2. Username:
+    - Required: The username field should not be empty.
+    - Length: The username should be between 5 and 20 characters.
+    - Characters: The username should only contain alphanumeric characters and underscores. (optional)
+
+3. Email:
+    - Required: The email field should not be empty.
+    - Contain: The email should contain @ and .com
+    - Format: The email should be in a valid email format (e.g., user@example.com). (optional)
+
+4. Number:
+    - Required: The number field should not be empty.
+    - Format: The number should be a valid phone number format (e.g., 10 digits).
+
+5. Password:
+    - Required: The password field should not be empty.
+    - Length: The password should be between 8 and 16 characters.
+    - Complexity: The password should contain at least one uppercase letter, one lowercase letter, one number, and one special character. (optional)
+
+6. Confirm Password:
+    - Required: The confirm password field should not be empty.
+    - Match: The confirm password should match the password field.

@@ -1,0 +1,10 @@
+1. Create a random password generator (Full Stack).
+   a. Should have a function to generate a random password.
+   b. 8 - 16 characters long, 1 uppercase, 1 lowercase, 1 number, 1 special character.
+   c. Should have a function to copy the password to clipboard.
+2. Todo list (Full Stack).
+   a. Should have a function to add a task.
+   b. Should have a function to delete a task.
+   c. Should have a function to mark a task as completed.
+   d. Should have a function to edit a task.
+   e. Should have a function to clear all tasks.

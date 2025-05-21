@@ -1,0 +1,63 @@
+1. Create a students collection with the following fields:
+   - name (string): Student's full name
+   - age (number): Student's age
+   - department (string): Student's department/major
+   - rollNo (number): Unique student ID
+   - grade (number): Current grade/year
+   - contact (object):
+     - email (string)
+     - phone (number)
+
+2. Create an employees collection with the following fields:
+   - name (string): Employee's full name  
+   - age (number): Employee's age
+   - salary (number): Monthly salary
+   - department (string): Department they work in
+   - position (string): Job title/role
+   - joinDate (date): Date of joining
+   - contact (object):
+     - email (string)
+     - phone (number)
+
+3. Array of employees:
+[
+  { id: 1, name: "Alice Johnson", email: "alice.johnson@example.com", age: 28, city: "New York", salary: 75000, job: "Software Engineer" },
+  { id: 2, name: "Bob Smith", email: "bob.smith@example.com", age: 34, city: "Los Angeles", salary: 90000, job: "Product Manager" },
+  { id: 3, name: "Charlie Brown", email: "charlie.brown@example.com", age: 22, city: "Chicago", salary: 55000, job: "Data Analyst" },
+  { id: 4, name: "David Wilson", email: "david.wilson@example.com", age: 40, city: "Miami", salary: 105000, job: "Marketing Director" },
+  { id: 5, name: "Eva Davis", email: "eva.davis@example.com", age: 31, city: "Dallas", salary: 78000, job: "UX Designer" },
+  { id: 6, name: "Fiona Clark", email: "fiona.clark@example.com", age: 25, city: "San Francisco", salary: 85000, job: "Web Developer" },
+  { id: 7, name: "George Miller", email: "george.miller@example.com", age: 29, city: "Seattle", salary: 95000, job: "Operations Manager" },
+  { id: 8, name: "Hannah Martinez", email: "hannah.martinez@example.com", age: 36, city: "Austin", salary: 110000, job: "Sales Manager" },
+  { id: 9, name: "Isaac Taylor", email: "isaac.taylor@example.com", age: 27, city: "Boston", salary: 67000, job: "Graphic Designer" },
+  { id: 10, name: "Jack Wilson", email: "jack.wilson@example.com", age: 30, city: "Denver", salary: 80000, job: "HR Specialist" },
+  { id: 11, name: "Kara Scott", email: "kara.scott@example.com", age: 24, city: "Portland", salary: 55000, job: "Customer Support" },
+  { id: 12, name: "Liam Harris", email: "liam.harris@example.com", age: 32, city: "Phoenix", salary: 93000, job: "Network Engineer" },
+  { id: 13, name: "Megan Lewis", email: "megan.lewis@example.com", age: 26, city: "Detroit", salary: 72000, job: "Business Analyst" },
+  { id: 14, name: "Nathan Walker", email: "nathan.walker@example.com", age: 38, city: "Chicago", salary: 100000, job: "Finance Manager" },
+  { id: 15, name: "Olivia Allen", email: "olivia.allen@example.com", age: 33, city: "San Diego", salary: 88000, job: "Project Manager" },
+  { id: 16, name: "Paul Young", email: "paul.young@example.com", age: 41, city: "Houston", salary: 120000, job: "Engineering Manager" },
+  { id: 17, name: "Quinn Adams", email: "quinn.adams@example.com", age: 27, city: "Las Vegas", salary: 65000, job: "Accountant" },
+  { id: 18, name: "Riley Baker", email: "riley.baker@example.com", age: 29, city: "New York", salary: 80000, job: "Content Writer" },
+  { id: 19, name: "Sophia Gonzalez", email: "sophia.gonzalez@example.com", age: 35, city: "Austin", salary: 95000, job: "Product Designer" },
+  { id: 20, name: "Tom Reed", email: "tom.reed@example.com", age: 28, city: "San Francisco", salary: 70000, job: "SEO Specialist" }
+]
+
+Practice Questions using find() and findOne():
+
+a) Find all employees who are older than 30 years
+b) Find the first employee who has a salary greater than or equal to 90000
+c) Find all employees who work in New York or San Francisco
+d) Find employees who are younger than 25 years
+e) Find employees with salary between 70000 and 100000
+f) Find the first employee who is exactly 28 years old
+g) Find all employees who are not from Chicago
+h) Find employees who are either 27 or 29 or 31 years old
+i) Find employees with salary less than or equal to 80000
+j) Find all employees who are not Software Engineers
+k) Find employees whose age is greater than 35
+l) Find the first employee with salary less than 60000
+m) Find all employees whose age is not in [25, 30, 35]
+n) Find employees with salary greater than 100000
+o) Find all employees whose city is either Austin or Miami
+

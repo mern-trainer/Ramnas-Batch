@@ -1,0 +1,3 @@
+Design: https://www.figma.com/design/qA2gB8IqQyARwSjF0grKaz/Responsive-Landing-Page-Design-%7C-Website-Home-Page-Design-%7C-Agency-Website-UI-Design-(Community)?node-id=0-1&t=qQmPanxMYuaU269h-1
+
+Each section should be responsive to the screen size and should be different components.

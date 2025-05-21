@@ -1,0 +1,12 @@
+Memoize the following functions
+
+1. Write a function that takes array of numbers and calculate the sum of all the numbers.
+2. Write a function that takes a number as an argument and returns the factorial of that number.
+3. Write a funciton that takes a number as an argument and returns the number is palindrome or not.
+4. Write a funciton that takes a number as an argument and returns the number is prime or not.
+5. Write a function that takes an id as an argument and returns the name and avatar of the user.
+    Use Api: https://api.escuelajs.co/api/v1/users/<replace_with_id>
+6. Write a function that takes a limit as an argument and returns the first n users info.
+    Use Api: https://www.freetestapi.com/api/v1/users?limit=<replace_with_limit>
+7. Write a function that takes a string as an argument and returns the reverse of the string.
+

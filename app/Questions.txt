@@ -1,0 +1,6 @@
+-> What is reactJS => 
+-> Features => 
+   -> Components => 
+   -> JSX => 
+   -> Virtual DOM => 
+   -> One Way Data Binding / Uni-Directional Data Flow =>

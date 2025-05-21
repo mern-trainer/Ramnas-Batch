@@ -1,0 +1,16 @@
+1. Write a function that takes an array of numbers and returns a new array where each number is doubled using the map method.
+2. Write a function that takes an array of numbers and returns a new array containing only the even numbers using the filter method.
+3. Write a function that takes an array of strings and returns a new array with all strings converted to uppercase using the map method.
+4. Write a function that takes an array of strings and a minimum length, and returns a new array containing only the strings that are longer than the specified length using the filter method.
+5. Write a function that takes an array of numbers and returns a new array where each number is squared using the map method.
+6. Write a function that takes an array of numbers, filters out numbers less than a specified value, and returns a new array where each remaining number is incremented by 10 using filter and map methods.
+7. Write a function that takes an array of numbers, filters out odd numbers, and returns a new array where each remaining number is doubled using filter and map methods.
+8. Write a function that takes an array of strings and returns a new array where each string is capitalized (i.e., the first letter of each string is uppercase) using the map method.
+9. Write a function that takes an array of numbers and returns a new array containing only the non-negative numbers using the filter method.
+10. Write a function that takes an array of numbers and returns a new array where each number is cubed using the map method.
+11. Write a function that takes an array of strings and a letter, and returns a new array containing only the strings that start with the given letter using the filter method.
+12. Write a function that takes an array of numbers, filters out numbers less than 5, and returns a new array where each remaining number is multiplied by 3 using filter and map methods.
+13. Write a function that takes an array of strings and a character, and returns a new array where all strings containing the specified character are removed using the filter method.
+14. Write a function that takes an array of strings and returns a new array where each string is replaced by its length using the map method.
+
+

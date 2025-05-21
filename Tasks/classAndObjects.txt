@@ -1,0 +1,16 @@
+************************************** 09/01/25 - Basic Questions - Complete by 14/01/25 ***********************************************************
+
+1. Create a class called "Car" with properties "make" and "model". Create an object from the class and assign values to its properties.
+2. Create a class called "Student" with properties "name", "age", and "grade". Create an object from the class and assign values to its properties.
+3. Create a class called "Person" with properties "name", "age", and "height". Create an object from the class and assign values to its properties.
+4. Create a class called "Employee" with properties "name", "age", "salary", and "jobTitle". Create an object from the class and assign values to its properties.
+5. Create a class called "Rectangle" with properties "width" and "height". Create an object from the class and assign values to its properties.
+
+************************************** 09/01/25 - Advanced Questions - Complete by 14/01/25 ***********************************************************
+
+1. Create a class called "Todo" with properties "task", "dueDate", and "priority". Create an array of "Todo" objects and populate it with sample tasks.
+2. Create a class called "Book" with properties "title", "author", and "isbn". Create an array of "Book" objects and populate it with sample books.
+3. Create a class called "TimeTable" with properties "subject", "day", and "time". Create an array of "TimeTable" objects and populate it with sample schedules.
+4. Create a class called "Movie" with properties "title", "director", and "releaseYear". Create an array of "Movie" objects and populate it with sample movies.
+5. Create a class called "ShoppingList" with properties "itemName", "quantity", and "price". Create an array of "ShoppingList" objects and populate it with sample items.
+

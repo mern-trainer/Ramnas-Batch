@@ -1,0 +1,35 @@
+1. Create a User Registration System with OTP Verification
+
+Requirements:
+- Create API endpoints for user registration
+- Implement email validation using OTP
+- Store user data securely in MongoDB
+- Handle OTP generation and verification
+
+Technical Details:
+a) User Registration Flow:
+   - Accept user details (name, email, password)
+   - Generate 6-digit OTP
+   - Send OTP via email
+   - Store user data with pending verification status
+
+b) OTP Verification Flow:
+   - Accept OTP input from user
+   - Validate against stored OTP
+   - Update user verification status
+   - Generate JWT token for authentication
+
+c) Database Schema:
+   - User collection with fields:
+     * name
+     * email
+     * password (hashed)
+     * otp
+     * isVerified
+     * createdAt
+
+d) Security Measures:
+   - Password hashing
+   - OTP expiration
+   - Input validation
+   - Error handling

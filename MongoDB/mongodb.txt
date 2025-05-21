@@ -1,0 +1,36 @@
+Mongodb
+------------------------------------------------------------------------------------------------------------------
+-> MongoDB is a popular NoSQL, document-oriented database designed for high performance, high availability, and easy 
+scalability. Instead of storing data in tables as in traditional relational databases, MongoDB stores data in 
+flexible, JSON-like documents, making it well-suited for handling unstructured or semi-structured data.
+------------------------------------------------------------------------------------------------------------------
+
+Features
+------------------------------------------------------------------------------------------------------------------
+-> Document-Oriented Storage
+-> Schema-less
+-> High Performance
+-> Indexing
+-> Aggregation Framework
+-> Replication
+-> Scalability
+------------------------------------------------------------------------------------------------------------------
+
+CRUD in MongoDB
+------------------------------------------------------------------------------------------------------------------
+Create -> insertOne and insertMany
+Read -> findOne and find
+Update -> updateOne and updateMany
+Delete -> deleteOne and deleteMany
+------------------------------------------------------------------------------------------------------------------
+
+Comparison
+
+< -> $lt
+<= -> $lte
+> -> $gt
+>= -> $gte
+== -> $eq
+!= -> $ne
+includes -> $in
+not includes -> $nin

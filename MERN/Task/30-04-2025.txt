@@ -1,0 +1,47 @@
+1. User Authentication System Implementation
+
+Backend (Node.js/Express):
+- Create API endpoints for user signup and login
+- Implement password hashing using bcrypt
+- Generate and verify JWT tokens
+- Store user data in memory array
+- Add middleware to protect private routes
+
+Routes:
+POST /api/auth/signup
+- Validate input fields (name, username, email, phone, password)
+- Hash password using bcrypt
+- Store user in array
+- Return success message
+
+POST /api/auth/login
+- Validate credentials
+- Generate JWT token
+- Return token and user data
+
+GET /api/profile
+- Protected route (requires valid JWT)
+- Return logged in user details
+
+Frontend (React):
+- Create signup form with validation
+- Create login form
+- Add protected profile page
+- Implement token storage in cookie
+
+Required Fields:
+Signup:
+- Full Name
+- Username 
+- Email
+- Phone Number
+- Password
+- Confirm Password
+
+Login:
+- Username
+- Password
+
+Profile:
+- Display user details
+- Only accessible when logged in

@@ -1,0 +1,4 @@
+1. Build a Shop page that fetches and displays products from https://dummyjson.com/products.  
+2. Implement a Single Product View using `useNavigate` and `useParams`:  
+   - Fetch product details from `https://dummyjson.com/products/<product_id>` (replace `<product_id>` with the actual product ID).  
+   - Display product information, images, and a product review section (all fields are available in the API).

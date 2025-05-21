@@ -1,0 +1,3 @@
+1. Design a registration form including fields for name, username, email, phone number, password, and confirm password.
+ a. Ensure each field is validated using regex patterns.
+2. Develop a product information form for an ecommerce platform featuring fields for product ID, product title, description, image, stock quantity, price, discount percentage, etc.

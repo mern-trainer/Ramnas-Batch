@@ -1,0 +1,3 @@
+1. Create a todo list using context api.
+ a. A page for adding a new todo.
+ b. A page for listing all todos.
